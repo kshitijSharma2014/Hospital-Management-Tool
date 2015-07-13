@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AdmitPatient.Controller_Admit_Patient">
+   <children>
+      <Label layoutX="298.0" layoutY="48.0" text="Admit Patient" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="175.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Separator layoutX="224.0" layoutY="104.0" prefHeight="10.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0" />
+      <GridPane layoutX="127.0" layoutY="149.0" prefHeight="372.0" prefWidth="400.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="179.0" prefWidth="200.0" text="Patient's ID" />
+            <Label prefHeight="231.0" prefWidth="200.0" text="Date of admission" GridPane.rowIndex="2" />
+            <Label prefHeight="241.0" prefWidth="200.0" text="Time of Admission" GridPane.rowIndex="3" />
+            <Label prefHeight="241.0" prefWidth="200.0" text="Room No." GridPane.rowIndex="4" />
+            <TextField fx:id="room_no" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="pat_id" GridPane.columnIndex="1" />
+            <DatePicker fx:id="date_admit" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="time_admit" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label prefHeight="179.0" prefWidth="200.0" text="Patient's Name" GridPane.rowIndex="1" />
+            <TextField fx:id="pat_name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <ButtonBar layoutX="233.0" layoutY="579.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="202.0" AnchorPane.rightAnchor="202.0">
+        <buttons>
+          <Button fx:id="btn_save" mnemonicParsing="false" onAction="#handle_btn_save" text="Save" />
+            <Button fx:id="btn_clear" mnemonicParsing="false" onAction="#handle_btn_clear" text="Clear" />
+            <Button fx:id="btn_cancel" mnemonicParsing="false" onAction="#handle_btn_cancel" text="Cancel" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>

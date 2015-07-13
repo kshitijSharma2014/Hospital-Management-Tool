@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="299.0" prefWidth="695.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Login.Controller_Login">
+   <children>
+      <PasswordField fx:id="password" layoutX="283.0" layoutY="180.0" text="" />
+      <TextField fx:id="username" layoutX="283.0" layoutY="144.0" text="" />
+      <Label layoutX="196.0" layoutY="148.0" prefHeight="17.0" prefWidth="87.0" text="USERNAME">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <AnchorPane prefHeight="125.0" prefWidth="600.0">
+         <effect>
+            <ImageInput>
+               <source>
+                  <Image fx:id="img_logo" url="/Resources/img_logo.png" />
+               </source>
+            </ImageInput>
+         </effect></AnchorPane>
+      <AnchorPane prefHeight="116.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="272.0" layoutY="106.0" prefHeight="17.0" prefWidth="149.0" text="Login to continue" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="196.0" layoutY="184.0" prefHeight="17.0" prefWidth="87.0" text="PASSWORD">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ButtonBar layoutX="413.0" layoutY="230.0" prefHeight="40.0" prefWidth="100.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" />
+      <Button fx:id="btn_connect" layoutX="358.0" layoutY="238.0" mnemonicParsing="false" onAction="#handle_btn_connect" text="Connect to Database" textFill="#366ae3">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_login" layoutX="219.0" layoutY="239.0" minWidth="83.0" mnemonicParsing="false" onAction="#handle_btn_login" prefHeight="26.0" text="LOGIN" textFill="#366ae3">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Employee.Controller_Add_Employee">      
+   <children>
+      
+      <AnchorPane layoutX="23.0" layoutY="41.0" prefHeight="563.0" prefWidth="594.0">
+         <children>
+            <TextField fx:id="emp_name" layoutX="25.0" layoutY="100.0" prefHeight="25.0" prefWidth="159.0" />
+            <TextField fx:id="emp_username" layoutX="25.0" layoutY="156.0" prefHeight="25.0" prefWidth="159.0" />
+            <Label layoutX="28.0" layoutY="82.0" prefHeight="20.0" prefWidth="84.0" text="Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="159.0" layoutY="9.0" text="Create an account">
+               <font>
+                  <Font name="Gill Sans MT Bold" size="36.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.9190476190476191" startY="0.3476190476190476">
+                     <stops>
+                        <Stop color="#198d8dba" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label layoutX="27.0" layoutY="136.0" text="User Name*">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="190.0" prefHeight="20.0" prefWidth="144.0" text="Create a password*">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="198.0" layoutY="190.0" prefHeight="20.0" prefWidth="174.0" text="Confirm your password*">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="243.0" prefHeight="20.0" prefWidth="110.0" text="Category*">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox id="cat" fx:id="emp_category" layoutX="25.0" layoutY="263.0" prefHeight="25.0" prefWidth="159.0">
+                <items>
+        
+              <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Administrator" />
+          <String fx:value="Medical Officer" />
+          <String fx:value="Receptionist" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+
+            <Label layoutX="22.0" layoutY="301.0" prefHeight="20.0" prefWidth="134.0" text="Date of Birth*">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox id="ms" fx:id="emp_marital_status" layoutX="24.0" layoutY="372.0" prefHeight="25.0" prefWidth="159.0">
+                                    <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Single" />
+          <String fx:value="Married" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+
+            <Label layoutX="21.0" layoutY="352.0" prefHeight="18.0" prefWidth="110.0" text="Marital Status">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Separator blendMode="DARKEN" layoutX="24.0" layoutY="52.0" opacity="0.41" prefHeight="3.0" prefWidth="468.0">
+               <effect>
+                  <InnerShadow color="#31bf05" />
+               </effect></Separator>
+            <PasswordField fx:id="emp_password" layoutX="26.0" layoutY="210.0" prefHeight="25.0" prefWidth="159.0" text="" />
+            <PasswordField fx:id="emp_password_confirm" layoutX="198.0" layoutY="210.0" prefHeight="25.0" prefWidth="173.0" text="" />
+            <Label layoutX="23.0" layoutY="404.0" prefHeight="20.0" prefWidth="56.0" text="Salary*">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="emp_salary" layoutX="23.0" layoutY="424.0" prefHeight="25.0" prefWidth="174.0" />
+            <Label layoutX="28.0" layoutY="458.0" prefHeight="20.0" prefWidth="101.0" text="Contact No.*">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="emp_contact_no" layoutX="24.0" layoutY="478.0" prefHeight="25.0" prefWidth="159.0" />
+            <Label layoutX="32.0" layoutY="514.0" prefHeight="20.0" prefWidth="101.0" text="Address *">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="202.0" layoutY="458.0" prefHeight="20.0" prefWidth="101.0" text="State*">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="394.0" layoutY="458.0" prefHeight="20.0" prefWidth="101.0" text="City*">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="emp_state" layoutX="200.0" layoutY="478.0" prefHeight="20.0" prefWidth="168.0">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="Andhra Pradesh" />
+                     <String fx:value="Arunachal Pradesh" />
+                     <String fx:value="Assam" />
+                     <String fx:value="Bihar" />
+                     <String fx:value="Chhattisgarh" />
+                     <String fx:value="Goa" />
+                     <String fx:value="Gujarat" />
+                     <String fx:value="Harayana" />
+                     <String fx:value="Himachal Pradesh" />
+                     <String fx:value="Jammu and Kashmir" />
+                     <String fx:value="Jharkhand" />
+                     <String fx:value="Karnataka" />
+                     <String fx:value="Kerala" />
+                     <String fx:value="Madhya Pradesh" />
+                     <String fx:value="Maharashtra" />
+                     <String fx:value="Manipur" />
+                     <String fx:value="Meghalaya" />
+                     <String fx:value="Mizoram" />
+                     <String fx:value="Nagaland" />
+                     <String fx:value="Odisha" />
+                     <String fx:value="Punjab" />
+                     <String fx:value="Rajasthan" />
+                     <String fx:value="Sikkim" />
+                     <String fx:value="Tamil Nadu" />
+                     <String fx:value="Telangana" />
+                     <String fx:value="Tripura" />
+                     <String fx:value="Uttar Pradesh" />
+                     <String fx:value="Uttarakhand" />
+                     <String fx:value="West Bengal" />
+
+                  </FXCollections>
+               </items>
+            </ComboBox>
+            <TextField fx:id="emp_city" layoutX="394.0" layoutY="478.0" prefHeight="25.0" prefWidth="174.0" />
+            <TextArea fx:id="emp_address" layoutX="28.0" layoutY="534.0" prefHeight="51.0" prefWidth="286.0" />
+            <Label fx:id="password_label" layoutX="373.0" layoutY="214.0" prefHeight="17.0" prefWidth="144.0" textFill="#46d113" />
+            <Label fx:id="contact_no_label" layoutX="87.0" layoutY="506.0" prefHeight="17.0" prefWidth="200.0" text=" " textFill="#29e50b" />
+            <Label layoutX="32.0" layoutY="55.0" text="*Mandatory Fields" textFill="#2fb2de" />
+            <DatePicker fx:id="emp_date_of_joining" layoutX="200.0" layoutY="263.0" prefHeight="25.0" prefWidth="168.0" />
+            <Label layoutX="202.0" layoutY="243.0" prefHeight="20.0" prefWidth="127.0" text="Date of Joining*">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="475.0" layoutY="-43.0" prefHeight="87.0" prefWidth="84.0">
+               <effect>
+                  <ImageInput>
+                     <source>
+                        <Image url="file:/C:/Users/hppc/Desktop/medicare_sen/add-user-icon.png" />
+                     </source>
+                  </ImageInput>
+               </effect>
+            </AnchorPane>
+            <DatePicker fx:id="emp_date_birth" layoutX="22.0" layoutY="321.0" />
+            
+         </children>
+         <effect>
+            <ColorAdjust brightness="0.02" contrast="0.02" hue="0.81" />
+         </effect>
+      </AnchorPane>
+      <Separator prefWidth="200.0" />
+      <Button fx:id="btn_save" layoutX="270.0" layoutY="635.0" mnemonicParsing="false" onAction="#handle_btn_save" prefHeight="32.0" prefWidth="101.0" text="SAVE">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#adc2ee" />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_clear" layoutX="100.0" layoutY="635.0" mnemonicParsing="false" onAction="#handle_btn_clear" prefHeight="32.0" prefWidth="101.0" text="CLEAR">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#eb7a7a" />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="account_created" layoutX="200.0" layoutY="14.0" prefHeight="25.0" prefWidth="173.0" text="" textFill="#2727dd">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_cancel" layoutX="418.0" layoutY="635.0" mnemonicParsing="false" onAction="#handle_btn_cancel" prefHeight="32.0" prefWidth="97.0" text="CANCEL">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#b2ee87" />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      
+      
+      
+   </children>
+</AnchorPane>

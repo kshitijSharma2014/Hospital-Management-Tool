@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sen.AddTestReportController">
+   <children>
+      <SplitPane dividerPositions="0.18875502008032127" layoutX="252.0" layoutY="50.0" orientation="VERTICAL" prefHeight="500.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label layoutX="44.0" layoutY="34.0" text="Add Test Report">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="buttonCancel" layoutX="574.0" layoutY="39.0" mnemonicParsing="false" onAction="#goHome" text="Cancel" />
+                  <Label fx:id="labelMSG" layoutX="304.0" layoutY="43.0" prefHeight="20.0" prefWidth="204.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label layoutX="108.0" layoutY="82.0" text="Time" />
+                  <Button fx:id="buttonSave" layoutX="260.0" layoutY="346.0" mnemonicParsing="false" onAction="#saveEntry" prefHeight="25.0" prefWidth="68.0" text="Save" />
+                  <TextField fx:id="textName" layoutX="71.0" layoutY="158.0" />
+                  <TextArea fx:id="textDetail" layoutX="266.0" layoutY="155.0" prefHeight="174.0" prefWidth="254.0" />
+                  <TextField fx:id="textTime" layoutX="179.0" layoutY="78.0" promptText="hh:mm:ss" />
+                  <DatePicker fx:id="textDate" layoutX="101.0" layoutY="39.0" />
+                  <ListView fx:id="ls" layoutX="71.0" layoutY="183.0" prefHeight="25.0" prefWidth="149.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

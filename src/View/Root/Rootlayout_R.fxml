@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Root.Controller_Root_Layout">
+   <top>
+      <MenuBar fx:id="menu_bar" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu fx:id="menu_general" mnemonicParsing="false" text="File">
+          	<items>
+          	  <MenuItem fx:id="dashboard_menu" mnemonicParsing="false" text="Go to Dashboard" />
+              <MenuItem fx:id="database_menu" mnemonicParsing="false" text="Database Connectivity" />
+          	</items>
+          </Menu>
+          <Menu fx:id="menu_patient" mnemonicParsing="false" text="Patients">
+            <items>
+              <MenuItem fx:id="add_patient_menu" mnemonicParsing="false" text="Add a Patient" />
+              <MenuItem fx:id="search_patient_menu" mnemonicParsing="false" text="Search for a Patient" />
+            </items>
+          </Menu>          
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

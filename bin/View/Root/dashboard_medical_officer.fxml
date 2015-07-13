@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Root.Controller_Dashboard_Medical_Officer">
+   <children>
+      <Separator layoutX="-3.0" layoutY="75.0" prefHeight="8.0" prefWidth="607.0" />
+      <Label layoutX="251.0" layoutY="83.0" text="Welcome" underline="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_manage_indoor_pat" layoutX="55.0" layoutY="138.0" mnemonicParsing="false" onAction="#handle_btn_manage_indoor_patient" prefHeight="56.0" prefWidth="179.0" text="Manage Indoor Patient">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_edit_profile" layoutX="474.0" layoutY="138.0" mnemonicParsing="false" onAction="#handle_btn_edit_profile" text="Edit Profile">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="100.0" fitWidth="600.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@SHARDA.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn_logout" layoutX="475.0" layoutY="83.0" mnemonicParsing="false" onAction="#handle_btn_logout" text="logout">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_manage_medicines" layoutX="399.0" layoutY="190.0" mnemonicParsing="false" onAction="#handle_btn_manage_medicine" prefHeight="25.0" prefWidth="155.0" text="MANAGE MEDICINES" textFill="#08426b" />
+      <Button fx:id="btn_manage_tests" layoutX="399.0" layoutY="283.0" mnemonicParsing="false" onAction="#handle_btn_manage_test" text="MANAGE TEST TYPES" textFill="#08426b" />
+      <Button fx:id="btn_manage_fees" layoutX="400.0" layoutY="235.0" mnemonicParsing="false" onAction="#handle_btn_manage_fee" text="MANAGE FEES TYPES" textFill="#08426b" />
+      <Button fx:id="btn_manage_remarks" layoutX="399.0" layoutY="331.0" mnemonicParsing="false" onAction="#handle_btn_manage_remark" prefHeight="25.0" prefWidth="155.0" text="MANAGE REMARKS" textFill="#08426b" />
+      <Button fx:id="btn_add_patient" layoutX="54.0" layoutY="213.0" mnemonicParsing="false" onAction="#handle_btn_add_new_patient" prefHeight="50.0" prefWidth="200.0" text="Add Patient">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_manage_patient" layoutX="47.0" layoutY="299.0" mnemonicParsing="false" onAction="#handle_btn_manage_patient" text="Manage Patient">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

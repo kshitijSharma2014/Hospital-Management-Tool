@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Receipt.Controller_FXML_Receipt">
+    <children>
+        <Separator layoutX="-8.0" layoutY="53.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="3.0" prefWidth="460.0" AnchorPane.leftAnchor="-8.0" AnchorPane.rightAnchor="-2.0" />
+          <Label fx:id="patID" layoutX="14.0" layoutY="68.0" text="Patient ID :">
+              <font>
+                  <Font size="14.0" />
+              </font>
+          </Label>
+          <Label fx:id="valueID" layoutX="118.0" layoutY="68.0" prefHeight="20.0" prefWidth="100.0">
+              <font>
+                  <Font size="14.0" />
+              </font>
+          </Label>
+          <Label fx:id="patName" layoutX="14.0" layoutY="99.0" text="Patient Name :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+          <Label fx:id="valueName" layoutX="118.0" layoutY="99.0" prefHeight="17.0" prefWidth="200.0">
+              <font>
+                  <Font size="14.0" />
+              </font>
+          </Label>
+        <TableView fx:id="table" editable="true" layoutX="14.0" layoutY="129.0" prefHeight="389.0" prefWidth="469.0" AnchorPane.bottomAnchor="102.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="129.0">
+            <columns>
+                <TableColumn fx:id="feeTypeCol" minWidth="-1.0" prefWidth="300.0" text="Fee Type" />
+                <TableColumn fx:id="chargesCol" minWidth="-Infinity" prefWidth="116.0" text="Charges" />
+            </columns>
+        </TableView>
+        <ComboBox fx:id="CB" layoutX="8.0" layoutY="527.0" prefHeight="30.0" prefWidth="191.0" promptText="Fee Type" AnchorPane.bottomAnchor="63.0" AnchorPane.leftAnchor="8.0"> 
+            </ComboBox>
+
+        <TextField fx:id="addCharges" layoutX="205.0" layoutY="527.0" prefHeight="30.0" prefWidth="100.0" promptText="Charges" AnchorPane.bottomAnchor="63.0" AnchorPane.leftAnchor="205.0" />
+        <Button fx:id="Add" layoutX="318.0" layoutY="527.0" mnemonicParsing="false" onAction="#addButtonClick" text="Add" AnchorPane.bottomAnchor="63.0" AnchorPane.rightAnchor="86.0">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+        <Button fx:id="del" layoutX="371.0" layoutY="527.0" mnemonicParsing="false" onAction="#deletebutton" text="Delete" AnchorPane.bottomAnchor="63.0" AnchorPane.rightAnchor="19.0">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Group layoutX="17.0" layoutY="570.0" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="17.0">
+         <children>
+              <Label fx:id="total" text="Total :">
+                  <font>
+                      <Font size="18.0" />
+                  </font>
+              </Label>
+              <TextField fx:id="valueTotal" editable="false" layoutX="57.0" layoutY="1.0" prefHeight="25.0" prefWidth="94.0" />
+         </children>
+      </Group>
+      <HBox layoutX="280.0" layoutY="573.0" spacing="5.0" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="14.0">
+         <children>
+                <Button fx:id="print" mnemonicParsing="false" onAction="#printreceipt" text="Print">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+                <Button fx:id="cancel" mnemonicParsing="false" onAction="#cancelButton" text="Cancel">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+                <Button fx:id="save" mnemonicParsing="false" onAction="#saveButtonClick" text="Save">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+         </children>
+      </HBox>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="84.0" layoutY="14.0" text="RECEIPT AND CERTIFICATE" AnchorPane.leftAnchor="84.0" AnchorPane.rightAnchor="83.0">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+      <DatePicker fx:id="date" layoutX="265.0" layoutY="66.0" prefHeight="26.0" prefWidth="170.0" />
+    </children>
+</AnchorPane>

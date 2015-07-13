@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchor_pane" prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Prescription.Controller_Search_Prescription">
+   <children>
+      <Label prefHeight="70.0" prefWidth="664.0" text="Search for Prescription" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font size="57.0" />
+         </font>
+      </Label>
+      <Separator layoutY="120.0" prefHeight="16.0" prefWidth="700.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0" />
+      <SplitPane dividerPositions="0.3483709273182957" layoutY="129.0" prefHeight="571.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="129.0">
+        <items>
+          <AnchorPane fx:id="anchor_left" minHeight="0.0" minWidth="0.0" prefHeight="678.0" prefWidth="261.0">
+               <children>
+                  <TableView fx:id="table_view" layoutX="-1.0" layoutY="-1.0" prefHeight="580.0" prefWidth="239.0">
+                    <columns>
+                      <TableColumn fx:id="s_no_col" prefWidth="63.0" text="S.No." />
+                      <TableColumn fx:id="date_col" prefWidth="88.0" text="Date" />
+                        <TableColumn fx:id="time_col" prefWidth="87.0" text="Time" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane fx:id="anchor_right" minHeight="0.0" minWidth="0.0" prefHeight="472.0" prefWidth="310.0">
+               <children>
+                  <Label layoutX="73.0" layoutY="31.0" text="Prescription Details" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font size="38.0" />
+                     </font>
+                  </Label>
+                  <GridPane fx:id="grid_pane" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="80.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label prefHeight="75.0" prefWidth="330.0" text="Date &amp; Time of Prescrition" wrapText="true">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="75.0" prefWidth="330.0" text="Follow-up date" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="75.0" prefWidth="330.0" text="Disease" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="75.0" prefWidth="330.0" text="Remarks" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="pres_date" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                        <TextArea fx:id="pres_follow" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextArea fx:id="pres_disease" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextArea fx:id="pres_remarks" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="14.0" layoutY="420.0" prefHeight="127.0" prefWidth="357.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="66.0" AnchorPane.topAnchor="380.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="172.0" minWidth="10.0" prefWidth="172.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="15.0" minWidth="1.0" prefWidth="15.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="172.0" minWidth="10.0" prefWidth="172.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" percentHeight="30.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="15.0" minHeight="2.0" prefHeight="2.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" percentHeight="30.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="16.0" minHeight="5.0" prefHeight="5.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" percentHeight="30.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                      <Button fx:id="btn_add_pres" mnemonicParsing="false" onAction="#handle_btn_add_pres" prefHeight="63.0" prefWidth="234.0" text="Add new Prescription" />
+                        <Button fx:id="btn_see_med" mnemonicParsing="false" onAction="#handle_btn_see_med" prefHeight="63.0" prefWidth="243.0" text="See the medicines" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Button fx:id="btn_del_pres" mnemonicParsing="false" onAction="#handle_btn_del_pres" prefHeight="104.0" prefWidth="184.0" text="Delete the prescription" GridPane.columnIndex="2" />
+                        <Button fx:id="btn_edit_pres" mnemonicParsing="false" onAction="#handle_btn_edit_pres" prefHeight="63.0" prefWidth="258.0" text="Edit the prescription" GridPane.rowIndex="2" />
+                        <Button fx:id="btn_back" mnemonicParsing="false" onAction="#handle_btn_back" prefHeight="64.0" prefWidth="172.0" text="Go Back" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <Button fx:id="btn_print" mnemonicParsing="false" onAction="#handle_btn_print" prefHeight="80.0" prefWidth="171.0" text="Print the Prescription" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+      <Label layoutX="23.0" layoutY="103.0" text="Patient's Name: " />
+      <TextField fx:id="patient_name" layoutX="131.0" layoutY="98.0" prefHeight="26.0" prefWidth="196.0" />
+      <Label layoutX="455.0" layoutY="105.0" text="Patient's ID: " />
+      <TextField fx:id="patient_id" layoutX="554.0" layoutY="98.0" prefHeight="26.0" prefWidth="97.0" />
+   </children>
+</AnchorPane>

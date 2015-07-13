@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="634.0" prefWidth="709.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Root.Controller_Dashboard">
+   <children>
+      <AnchorPane layoutX="9.0" prefHeight="94.0" prefWidth="700.0">
+         <effect>
+            <ImageInput>
+               <source>
+                  <Image fx:id="img_logo" url="/Resources/img_logo.png" />
+               </source>
+            </ImageInput>
+         </effect>
+      </AnchorPane>
+      <Label fx:id="employee_name" layoutX="618.0" layoutY="88.0" prefHeight="18.0" prefWidth="90.0" text="">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_edit_profile" layoutX="20.0" layoutY="113.0" mnemonicParsing="false" onAction="#handle_btn_edit_profile" prefHeight="25.0" prefWidth="118.0" text="EDIT PROFILE">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#81e5d1" />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_logout" layoutX="581.0" layoutY="113.0" mnemonicParsing="false" onAction="#handle_btn_logout" prefHeight="25.0" prefWidth="90.0" text="LOGOUT">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#aae881" />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_manage_receipt" layoutX="37.0" layoutY="380.0" mnemonicParsing="false" onAction="#handle_btn_manage_receipt" prefHeight="25.0" prefWidth="147.0" text="Manage Receipts" textFill="#08426b" />
+      <Button fx:id="btn_manage_indoor_patient" layoutX="37.0" layoutY="492.0" mnemonicParsing="false" onAction="#handle_btn_manage_indoor_patient" prefHeight="54.0" prefWidth="147.0" text="Manage Indoor Patient" textFill="#08426b" wrapText="true" />
+      <Button fx:id="btn_add_patient" layoutX="259.0" layoutY="475.0" mnemonicParsing="false" onAction="#handle_btn_add_new_patient" prefHeight="25.0" prefWidth="184.0" text="ADD NEW PATIENT" textFill="#08426b" />
+      <Button fx:id="btn_manage_account" layoutX="286.0" layoutY="306.0" mnemonicParsing="false" onAction="#handle_btn_manage_account" text="Manage Accounts" textFill="#08426b" />
+      <Button fx:id="btn_manage_employee" layoutX="512.0" layoutY="304.0" mnemonicParsing="false" onAction="#handle_btn_manage_employee" text="Manage Employees" textFill="#08426b" />
+      <Button fx:id="btn_manage_medicines" layoutX="512.0" layoutY="357.0" mnemonicParsing="false" onAction="#handle_btn_manage_medicine" prefHeight="25.0" prefWidth="155.0" text="MANAGE MEDICINES" textFill="#08426b" />
+      <Button fx:id="btn_manage_tests" layoutX="512.0" layoutY="450.0" mnemonicParsing="false" onAction="#handle_btn_manage_test" text="MANAGE TEST TYPES" textFill="#08426b" />
+      <Button fx:id="btn_manage_fees" layoutX="513.0" layoutY="402.0" mnemonicParsing="false" onAction="#handle_btn_manage_fee" text="MANAGE FEES TYPES" textFill="#08426b" />
+      <Button fx:id="btn_manage_remarks" layoutX="512.0" layoutY="498.0" mnemonicParsing="false" onAction="#handle_btn_manage_remark" prefHeight="25.0" prefWidth="155.0" text="MANAGE REMARKS" textFill="#08426b" />
+      <Button fx:id="btn_search_patient" layoutX="262.0" layoutY="523.0" mnemonicParsing="false" onAction="#handle_btn_manage_patient" prefHeight="25.0" prefWidth="184.0" text="Manage Patient" textFill="#08426b" />
+      <AnchorPane layoutX="230.0" layoutY="85.0" prefHeight="73.0" prefWidth="75.0">
+         <effect>
+            <ImageInput />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="266.0" layoutY="161.0" prefHeight="64.0" prefWidth="192.0">
+         <effect>
+            <ImageInput>
+               <source>
+                  <Image fx:id="img_account" url="/Resources/img_account_management.png" />
+               </source>
+            </ImageInput>
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="20.0" layoutY="161.0" prefHeight="64.0" prefWidth="192.0">
+         <effect>
+            <ImageInput>
+               <source>
+                  <Image fx:id="img_patient" url="/Resources/img_patient_related_info.png" />
+               </source>
+            </ImageInput>
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="267.0" layoutY="394.0" prefHeight="54.0" prefWidth="184.0">
+         <effect>
+            <ImageInput>
+               <source>
+                  <Image fx:id="img_search" url="/Resources/img_search.png" />
+               </source>
+            </ImageInput>
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="512.0" layoutY="158.0" prefHeight="54.0" prefWidth="131.0">
+         <effect>
+            <ImageInput>
+               <source>
+                  <Image fx:id="img_add" url="/Resources/img_add.png" />
+               </source>
+            </ImageInput>
+         </effect>
+      </AnchorPane>
+      <Button fx:id="btn_manage_prescription" layoutX="37.0" layoutY="281.0" mnemonicParsing="false" onAction="#handle_btn_manage_prescription" text="Manage Prescriptions" textFill="#08426b" />
+      <Separator layoutX="7.0" layoutY="149.0" prefHeight="10.0" prefWidth="709.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="140.0">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#d5d7dd" />
+               </light>
+            </Lighting>
+         </effect>
+      </Separator>
+      <Separator layoutX="227.0" layoutY="236.0" orientation="VERTICAL" prefHeight="391.0" prefWidth="6.0">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#dddddd" />
+               </light>
+            </Lighting>
+         </effect>
+      </Separator>
+      <Separator layoutX="482.0" layoutY="233.0" orientation="VERTICAL" prefHeight="391.0" prefWidth="6.0">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#dddddd" />
+               </light>
+            </Lighting>
+         </effect>
+      </Separator>
+      <Separator layoutX="11.0" layoutY="224.0" prefHeight="3.0" prefWidth="686.0">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#d5d7dd" />
+               </light>
+            </Lighting>
+         </effect>
+      </Separator>
+      <Separator layoutX="242.0" layoutY="390.0" prefHeight="3.0" prefWidth="226.0">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#d5d7dd" />
+               </light>
+            </Lighting>
+         </effect>
+      </Separator>
+      <Separator layoutX="243.0" layoutY="449.0" prefHeight="3.0" prefWidth="226.0">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#d5d7dd" />
+               </light>
+            </Lighting>
+         </effect>
+      </Separator>
+   </children>
+</AnchorPane>

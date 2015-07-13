@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Root.Controller_Dashboard_Receptionist">
+   <children>
+      <ImageView fitHeight="100.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@SHARDA.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="-3.0" layoutY="75.0" prefHeight="8.0" prefWidth="607.0" />
+      <Button fx:id="btn_add_patient" layoutX="67.0" layoutY="177.0" mnemonicParsing="false" onAction="#handle_btn_add_new_patient" prefHeight="50.0" prefWidth="200.0" text="Add Patient" AnchorPane.bottomAnchor="171.0" AnchorPane.leftAnchor="67.0" AnchorPane.rightAnchor="356.0" AnchorPane.topAnchor="177.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_manage_patient" layoutX="329.0" layoutY="177.0" mnemonicParsing="false" onAction="#handle_btn_manage_patient" text="Manage Patient">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Label layoutX="263.0" layoutY="99.0" text="Welcome" underline="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_edit_profile" layoutX="473.0" layoutY="107.0" mnemonicParsing="false" onAction="#handle_btn_edit_profile" text="Edit Profile" />
+      <Button fx:id="btn_logout" layoutX="117.0" layoutY="120.0" mnemonicParsing="false" onAction="#handle_btn_logout" text="Logout" />
+   </children>
+</AnchorPane>

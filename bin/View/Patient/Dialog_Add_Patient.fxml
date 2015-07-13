@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="708.0" prefWidth="632.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Patient.Controller_Add_Patient">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Label layoutX="29.0" layoutY="167.0" text="First Name" />
+      <Label layoutX="29.0" layoutY="218.0" text="Middle Name" />
+      <Label layoutX="30.0" layoutY="270.0" text="Last Name" />
+      <TextField fx:id="textfirst" layoutX="126.0" layoutY="163.0" />
+      <TextField fx:id="textmiddle" layoutX="126.0" layoutY="214.0" />
+      <TextField fx:id="textlast" layoutX="126.0" layoutY="266.0" />
+      <Label layoutX="32.0" layoutY="324.0" text="sex" />
+      <Label layoutX="30.0" layoutY="375.0" text="Birth_Date" />
+      <Label layoutX="30.0" layoutY="418.0" text="Address" />
+      <Label layoutX="34.0" layoutY="462.0" text="phone" />
+      <TextField fx:id="textaddress" layoutX="126.0" layoutY="414.0" />
+      <TextField fx:id="textphone" layoutX="126.0" layoutY="458.0" />
+      <Label layoutX="29.0" layoutY="113.0" text="Date" />
+      <Label layoutX="26.0" layoutY="510.0" text="Emergency Name" />
+      <TextField fx:id="textemer" layoutX="126.0" layoutY="506.0" />
+      <DatePicker fx:id="textdate" layoutX="126.0" layoutY="109.0" prefHeight="26.0" prefWidth="171.0" />
+      <RadioButton fx:id="textmale" layoutX="126.0" layoutY="323.0" mnemonicParsing="false" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="radio1" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="textfemale" layoutX="203.0" layoutY="323.0" mnemonicParsing="false" text="Female" toggleGroup="$radio1" />
+      <Label layoutX="252.0" layoutY="561.0" />
+      <DatePicker fx:id="textbirth" layoutX="126.0" layoutY="371.0" prefHeight="26.0" prefWidth="171.0" stylesheets="@Datepicker.css" />
+      <Label layoutX="338.0" layoutY="113.0" text="Relation" />
+      <Label layoutX="338.0" layoutY="167.0" text="state" />
+      <Label layoutX="338.0" layoutY="218.0" text="city" />
+      <Label layoutX="338.0" layoutY="270.0" text="Marital status" />
+      <TextField fx:id="textrel" layoutX="438.0" layoutY="109.0" prefHeight="26.0" prefWidth="171.0" />
+      <TextField fx:id="textstate" layoutX="438.0" layoutY="163.0" prefHeight="26.0" prefWidth="171.0" />
+      <TextField fx:id="textcity" layoutX="438.0" layoutY="214.0" prefHeight="26.0" prefWidth="171.0" />
+      <Label layoutX="341.0" layoutY="368.0" text="ID" />
+      
+      <Label fx:id="textID" layoutX="438.0" layoutY="368.0" prefHeight="14.0" prefWidth="78.0" />
+      <ComboBox fx:id="textmarital" layoutX="440.0" layoutY="264.0" onAction="#handleButtonAction3" prefHeight="26.0" prefWidth="171.0" />
+      <Label alignment="CENTER" layoutX="85.0" layoutY="547.0" prefHeight="26.0" prefWidth="436.0" text="* Note: All the fields are mandatory">
+         <font>
+            <Font size="8.0" />
+         </font>
+      </Label>
+      <Label layoutX="334.0" layoutY="315.0" prefHeight="35.0" prefWidth="99.0" text="Emergency phone" wrapText="true" />
+      <TextField fx:id="textemerphone" layoutX="438.0" layoutY="320.0" prefHeight="26.0" prefWidth="171.0" />
+      <ImageView fitHeight="77.0" fitWidth="594.0" layoutX="19.0" layoutY="14.0">
+         <image>
+            <Image url="/Resources/img_logo.png" />
+         </image>
+      </ImageView>
+      <ButtonBar layoutX="234.0" layoutY="590.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="165.0" AnchorPane.rightAnchor="165.0">
+        <buttons>
+            <Button fx:id="btn_save" mnemonicParsing="false" onAction="#handle_btn_save" text="Save" />
+            <Button fx:id="btn_cancel" mnemonicParsing="false" onAction="#handle_btn_cancel" text="Cancel" />
+            <Button fx:id="btn_clear" mnemonicParsing="false" onAction="#handle_btn_clear" text="Clear" />
+        </buttons>
+      </ButtonBar>
+    </children>
+</AnchorPane>

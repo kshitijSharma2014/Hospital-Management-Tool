@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AdmitPatient.Controller_Add_Chart">
+   <children>
+      <Group layoutX="124.0" layoutY="93.0">
+         <children>
+            <Label layoutY="57.0" text="Time" />
+            <Label layoutY="104.0" text="Medication" />
+            <Label layoutX="-7.0" layoutY="200.0" text="Dosage" />
+            <TextField fx:id="textTime" layoutX="84.0" layoutY="53.0" />
+            <TextField fx:id="textMed" layoutX="84.0" layoutY="100.0" />
+            <TextField fx:id="textDosage" layoutX="84.0" layoutY="196.0" />
+            <ListView fx:id="ls" layoutX="84.0" layoutY="128.0" prefHeight="66.0" prefWidth="149.0" />
+         </children>
+      </Group>
+      <Button fx:id="buttonSave" layoutX="250.0" layoutY="361.0" mnemonicParsing="false" onAction="#saveChart" text="Save" />
+      <Button fx:id="buttonBack" layoutX="477.0" layoutY="28.0" mnemonicParsing="false" onAction="#goHome" text="Back" AnchorPane.rightAnchor="71.0" />
+      <Label layoutX="35.0" layoutY="15.0" text="ADD CHART">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="textDate" layoutX="163.0" layoutY="76.0" />
+      <TextField fx:id="textRemark" layoutX="208.0" layoutY="318.0" />
+      <Label layoutX="116.0" layoutY="323.0" text="Comments" />
+   </children>
+</AnchorPane>

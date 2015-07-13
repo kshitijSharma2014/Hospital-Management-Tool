@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Prescription.Controller_Search_Prescribed_Medicines">
+   <children>
+      <Label layoutX="250.0" layoutY="55.0" text="Prescribed Medicines" AnchorPane.leftAnchor="85.0" AnchorPane.rightAnchor="85.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Separator layoutY="140.0" prefHeight="10.0" prefWidth="700.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="140.0" />
+      <SplitPane dividerPositions="0.40257879656160456" layoutX="-1.0" layoutY="150.0" prefHeight="550.0" prefWidth="700.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="555.0" prefWidth="204.0">
+               <children>
+                  <TableView fx:id="table_view" layoutX="14.0" layoutY="72.0" prefHeight="521.0" prefWidth="204.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="72.0">
+                    <columns>
+                      <TableColumn fx:id="s_no_col" prefWidth="75.0" text="S. No." />
+                      <TableColumn fx:id="med_name_col" prefWidth="201.0" text="Medicine Name" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="14.0" layoutY="14.0" text="Date: " />
+                  <Label layoutX="14.0" layoutY="43.0" text="Time: " />
+                  <TextField fx:id="date" layoutX="70.0" layoutY="9.0" prefHeight="26.0" prefWidth="200.0" />
+                  <TextField fx:id="time" layoutX="70.0" layoutY="38.0" prefHeight="26.0" prefWidth="200.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="197.0" layoutY="44.0" text="Prescription Details" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Label>
+                  <GridPane fx:id="grid_pane" layoutX="79.0" layoutY="96.0" prefHeight="313.0" prefWidth="403.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="90.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="147.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="286.0" minWidth="10.0" prefWidth="119.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="286.0" minWidth="10.0" prefWidth="114.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label prefHeight="104.0" prefWidth="202.0" text="Medicine Name" />
+                        <Label prefHeight="104.0" prefWidth="202.0" text="Morning Amount" GridPane.rowIndex="1" />
+                        <Label prefHeight="104.0" prefWidth="202.0" text="Noon amount" GridPane.rowIndex="2" />
+                        <Label prefHeight="104.0" prefWidth="202.0" text="Evening Amount" GridPane.rowIndex="3" />
+                        <Label fx:id="morning_meal" prefHeight="104.0" prefWidth="121.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Label fx:id="noon_meal" prefHeight="96.0" prefWidth="121.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Label fx:id="evening_meal" prefHeight="147.0" prefWidth="121.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <TextArea fx:id="med_name" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                        <TextArea fx:id="morning_amt" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextArea fx:id="noon_amt" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextArea fx:id="evening_amt" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+                  <ButtonBar layoutX="13.0" layoutY="452.0" prefHeight="40.0" prefWidth="200.0">
+                    <buttons>
+                      <Button fx:id="btn_add" mnemonicParsing="false" onAction="#handle_btn_add" text="Add New " />
+                        <Button fx:id="btn_edit" mnemonicParsing="false" onAction="#handle_btn_edit" text="Edit" />
+                        <Button fx:id="btn_del" mnemonicParsing="false" onAction="#handle_btn_del" text="Delete" />
+                        <Button fx:id="btn_back" mnemonicParsing="false" onAction="#handle_btn_back" text="Back" />
+                    </buttons>
+                  </ButtonBar>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <Label layoutX="23.0" layoutY="117.0" text="Patient's Name: " />
+      <TextField fx:id="patient_name" layoutX="138.0" layoutY="112.0" prefHeight="26.0" prefWidth="227.0" />
+      <Label layoutX="472.0" layoutY="117.0" text="Patient's ID: " />
+      <TextField fx:id="patient_id" layoutX="560.0" layoutY="110.0" prefHeight="26.0" prefWidth="116.0" />
+   </children>
+</AnchorPane>

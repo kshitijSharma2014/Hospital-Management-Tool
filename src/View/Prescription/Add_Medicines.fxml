@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Prescription.Controller_Add_Prescribed_Medicines">
+   <children>
+      <Label layoutX="308.0" layoutY="67.0" text="Prescribe New Medicines" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Separator layoutX="239.0" layoutY="99.0" prefHeight="10.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="130.0" />
+      <GridPane fx:id="grid_pane" layoutX="17.0" layoutY="164.0" prefHeight="381.0" prefWidth="663.0" AnchorPane.bottomAnchor="139.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="180.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="80.0" minHeight="43.0" prefHeight="43.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="109.0" minHeight="60.0" prefHeight="109.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="80.0" minHeight="60.0" prefHeight="80.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="80.0" minHeight="60.0" prefHeight="80.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="80.0" minHeight="60.0" prefHeight="80.0" vgrow="NEVER" />
+         </rowConstraints>
+         <children>
+            <Label fx:id="med_name_label" text="Medicine Name" wrapText="true" />
+            <Label prefHeight="27.0" prefWidth="211.0" text="Morning_Amount" GridPane.rowIndex="2" />
+            <Label GridPane.rowIndex="3" />
+            <Label text="Noon_Amount" GridPane.rowIndex="3" />
+            <Label text="Evening_Amount" GridPane.rowIndex="4" />
+            <TextArea fx:id="morning_amt" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextArea fx:id="noon_amt" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextArea fx:id="evening_amt" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <RadioButton fx:id="morning_before_meal" mnemonicParsing="false" prefHeight="110.0" prefWidth="166.0" text="Before Meal" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group1" />
+               </toggleGroup>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </RadioButton>
+            <RadioButton fx:id="morning_after_meal" mnemonicParsing="false" prefHeight="60.0" prefWidth="204.0" text="After Meal" toggleGroup="$group1" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </RadioButton>
+            <RadioButton fx:id="noon_before_meal" mnemonicParsing="false" prefHeight="60.0" prefWidth="202.0" text="Before Meal" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group2" />
+               </toggleGroup>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </RadioButton>
+            <RadioButton fx:id="noon_after_meal" mnemonicParsing="false" prefHeight="60.0" prefWidth="192.0" text="After Meal" toggleGroup="$group2" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </RadioButton>
+            <RadioButton fx:id="evening_before_meal" mnemonicParsing="false" prefHeight="61.0" prefWidth="192.0" text="Before Meal" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group3" />
+               </toggleGroup>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </RadioButton>
+            <RadioButton fx:id="evening_after_meal" mnemonicParsing="false" prefHeight="61.0" prefWidth="235.0" text="After Meal" toggleGroup="$group3" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </RadioButton>
+            <TextField fx:id="medicine_name" GridPane.columnIndex="1" />
+            <ListView fx:id="medicine_name_list" onMouseClicked="#handle_mouse_click" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextArea fx:id="med_remarks" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label prefHeight="54.0" prefWidth="166.0" text="Some remarks about the medicine" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+      </GridPane>
+      <ButtonBar layoutX="179.0" layoutY="575.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="575.0">
+        <buttons>
+          <Button fx:id="btn_save" mnemonicParsing="false" onAction="#handle_btn_save" text="Save" />
+            <Button fx:id="btn_clear" mnemonicParsing="false" onAction="#handle_btn_clear" text="Clear" />
+            <Button fx:id="btn_cancel" mnemonicParsing="false" onAction="#handle_btn_cancel" text="Cancel" />
+        </buttons>
+      </ButtonBar>
+      <Label layoutX="23.0" layoutY="104.0" text="Patient's Name: " />
+      <TextField fx:id="patient_name" layoutX="138.0" layoutY="99.0" prefHeight="26.0" prefWidth="227.0" />
+      <Label layoutX="472.0" layoutY="104.0" text="Patient's ID: " />
+      <TextField fx:id="patient_id" layoutX="560.0" layoutY="97.0" prefHeight="26.0" prefWidth="116.0" />
+   </children>
+</AnchorPane>

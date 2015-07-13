@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Account.Controller_Account_Info">
+   <children>
+      <HBox layoutX="8.0" layoutY="91.0" spacing="2.0">
+         <children>
+            <Hyperlink fx:id="project" text="Start Date" />
+         </children>
+      </HBox>
+      <HBox layoutX="305.0" layoutY="91.0" spacing="2.0">
+         <children>
+            <Hyperlink fx:id="project1" text="End Date" />
+         </children>
+      </HBox>
+      <Button fx:id="Search" layoutX="274.0" layoutY="148.0" lineSpacing="15.0" mnemonicParsing="false" onAction="#Searchinfo" text="Search">
+         <tooltip>
+            <Tooltip text="Click it for search" />
+         </tooltip></Button>
+      <HBox layoutX="8.0" layoutY="166.0" spacing="15.0">
+         <children>
+            <Label fx:id="label" prefHeight="27.0" prefWidth="388.0" />
+         </children>
+      </HBox>
+      <TableView fx:id="table" editable="true" layoutY="209.0" prefHeight="320.0" prefWidth="600.0" tableMenuButtonVisible="true">
+        <columns>
+          <TableColumn fx:id="date" prefWidth="355.0" text="Date" />
+          <TableColumn fx:id="amount" prefWidth="230.0" text="Amount" />
+        </columns>
+      </TableView>
+      <Hyperlink layoutX="491.0" layoutY="554.0" text="Total Amount" />
+      <TextField fx:id="text" layoutX="342.0" layoutY="553.0" prefHeight="26.0" prefWidth="147.0" />
+      <DatePicker fx:id="start_date" layoutX="90.0" layoutY="91.0" prefHeight="26.0" prefWidth="208.0" stylesheets="@../Resources/Datepicker.css" />
+      <DatePicker fx:id="end_date" layoutX="383.0" layoutY="90.0" prefHeight="26.0" prefWidth="208.0" />
+      <HBox layoutX="55.0" layoutY="553.0" spacing="20.0">
+         <children>
+            <Button fx:id="viewdetails" layoutX="60.0" layoutY="553.0" mnemonicParsing="false" onAction="#View_Details" text="View Details" />
+         </children>
+      </HBox>
+      <ImageView fitHeight="73.0" fitWidth="452.0" layoutX="140.0" AnchorPane.bottomAnchor="527.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../../Resources/AM.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="73.0" fitWidth="87.0" layoutX="12.0" layoutY="14.0">
+         <image>
+            <Image url="@../../Resources/Advanced_User_Accounts.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

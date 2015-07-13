@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CMS.Controller_Add_Remarks">
+   <children>
+      <Label prefHeight="55.0" prefWidth="437.0" text="Add a New Remark" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font size="45.0" />
+         </font>
+      </Label>
+      <Separator layoutX="81.0" layoutY="98.0" prefHeight="10.0" prefWidth="700.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0" />
+      <GridPane fx:id="grid_pane" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="170.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="NEVER" />
+          <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="NEVER" />
+            <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="NEVER" />
+          <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="NEVER" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="remark_eng_label" prefHeight="98.0" prefWidth="250.0" text="Remark (in English)" wrapText="true" />
+            <Label fx:id="remark_guj_label" prefHeight="97.0" prefWidth="250.0" text="Remark (in Gujarati)" wrapText="true" GridPane.rowIndex="1" />
+            <Label fx:id="remark_context_label" text="Remark Context" wrapText="true" GridPane.rowIndex="3" />
+            <TextArea fx:id="remark_eng" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
+            <TextArea fx:id="remark_guj" onKeyTyped="#handle_guj_change" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextArea fx:id="remark_context" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextArea fx:id="remark_trans" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="remark_trans_label" prefHeight="97.0" prefWidth="250.0" text="Remark (trans-literated)" wrapText="true" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0">
+        <buttons>
+          <Button fx:id="btn_save" mnemonicParsing="false" onAction="#handle_btn_save" text="Save" />
+            <Button fx:id="btn_clear" mnemonicParsing="false" onAction="#handle_btn_clear" text="Clear" />
+            <Button fx:id="btn_cancel" mnemonicParsing="false" onAction="#handle_btn_cancel" text="Cancel" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>
